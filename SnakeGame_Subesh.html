@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            display: flex;
+             flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+            gap: 20px;
+        }
+        #score,#highscore{
+          /* height: 5vh; */
+          
+          display: flex;
+          justify-content: center;
+          color: white;
+          font-size: 30px;
+          
+        }
+       #gameBoard{
+            width: 1000px;
+            height: 520px;
+            display: grid;
+            box-shadow: 0 0 0 5px #f00;
+            grid-template-columns: repeat(50,20px);
+            grid-template-rows: repeat(26,20px)
+            ;
+       }
+       #box{
+        width: 20px;
+        height: 20px;
+        box-shadow: 2px 2px 0 1px black ;
+        background-color: black;
+
+       }
+       #head{
+        width: 20px;
+        height: 20px;
+        /* background-image: url("snake.png"); */
+        background-color: blue;
+        /* background-size: contain; */
+        /* border: 1px solid white; */
+        border-radius: 50%;
+        /* filter: invert(100%) brightness(200%); */
+       }
+       #tail{
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        /* border: 1px solid white; */
+        border-radius: 50%;
+       }
+       #food{
+        width: 20px;
+        height: 20px;
+        background-color: orange;
+        /* border: 1px solid white; */
+        border-radius: 50%;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="score"></div>
+    <div id="highscore"></div>
+    <div id="gameBoard"></div>
+
+    <script src="snake.js"></script>
+
+   
+
+</body>
+</html>
