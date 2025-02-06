@@ -4,7 +4,7 @@ const printHighScore=document.getElementById("highscore");
 
 printHighScore.innerText="HighScore: "+ (localStorage.highScore>0?localStorage.highScore:"0");
 
-//global variables
+
 let width = 50;
 let height = 26;
 var x = 6,
@@ -83,8 +83,7 @@ function gameLogic() {
         break;
   }
 
-  // Update head position based on the direction
-
+  
   
   
   switch (prevKey) {
@@ -113,7 +112,7 @@ function gameLogic() {
         }
   }
 
-  // Render the game board
+  
   for (let cell of board.childNodes) {
     let tempX = parseInt(cell.getAttribute('x'));
     let tempY = parseInt(cell.getAttribute('y'));
@@ -130,7 +129,7 @@ function gameLogic() {
       cell.setAttribute('id', 'box');
     }
   }
-  //check head collision with tail
+  
   for (let k = 0; k < tailSize; k++) {
     if (x == tailX[k] && y == tailY[k]) {
       clearInterval(gameInterval); // Stop the game loop
@@ -139,7 +138,7 @@ function gameLogic() {
     }
   }
 
-  // Update tail positions
+  
   if (tailSize >= 1) {
     let prevTailX = tailX[0];
     let prevTailY = tailY[0];
@@ -157,7 +156,7 @@ function gameLogic() {
     }
   }
 
-  //check if eaten food or not
+  
   if (x == foodX && y == foodY) {
     food(); //new food
     
